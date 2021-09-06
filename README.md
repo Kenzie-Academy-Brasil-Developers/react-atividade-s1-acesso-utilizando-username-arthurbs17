@@ -1,88 +1,70 @@
-# 📋 Sobre a atividade
+# Getting Started with Create React App
 
-Nesta atividade o principal objetivo é entender como podemos utilizar as renderizações condicionais em conjunto com pequenos formulários utilizando o conceito de [estados no react](https://reactjs.org/docs/hooks-state.html)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# ℹ️ Informações úteis
+## Available Scripts
 
-## Exemplo de resultado
+In the project directory, you can run:
 
-![](https://i.imgur.com/pW3cRkL.gif)
+### `yarn start`
 
-## 🖐️🍝Mão na massa!
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1.  Crie um projeto react usando o comando: `yarn create react-app***nomedoseuprojeto***`
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-2.  Abra seu projeto no seu editor e execute o comando `yarn start` para iniciar o servidor com seu app.
+### `yarn test`
 
-3.  Crie os componentes `GetUserComponent` e `WelcomePage` dentro de uma pasta `components`, assim como vimos nas aulas anteriores.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    ![](https://i.imgur.com/iuNYoNf.png)
+### `yarn build`
 
-4.  O componente `App.js` deve possuir um **state** _isLoggedIn_, _setIsLoggedIn_ que é instanciado a partir do useState e **inicializado** como false.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-5.  Além disso, o App possui:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-    *   Um state `user` que é **inicializado** como uma string vazia
-    *   O **App** importa os dois componentes **WelcomePage** e **GetUserComponent**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    * * *
+### `yarn eject`
 
-6.  O componente `WelcomePage` recebe duas props `{ user, setIsLoggedIn }`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-7.  O componente `WelcomePage` deverá:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-    *   Conter uma função `**HandleLogout**` que chama a prop `SetIsLoggedIn` transformando-a em false
-    *   Conter uma mensagem de Boas-vindas acessando a prop `{user}`
-    *   Conter um button que seu onclick chama a função `HandleLogout`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-    * * *
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-8.  O componente `GetUserComponent` recebe duas props `{ setUser, setIsLoggedIn }`
+## Learn More
 
-9.  O componente `GetUserComponent` deverá:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-    *   Conter um state `userInput`, `setUserInput` que é **inicializado** como uma string vazia
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-    *   Seu JSX deve conter uma tag pai [form](https://www.w3schools.com/tags/tag_form.asp)
+### Code Splitting
 
-    *   Na tag form deve haver uma tag `input` com a prop **value** e o evento **onChange** e seu ****onChange deve chamar a função `setUserInput`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-            <input
-                    type="text"
-                    value={userInput}
-                    onChange={(event) => setUserInput(event.target.value)}
-                  />
+### Analyzing the Bundle Size
 
-    * * *
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-    *   Agora crie uma função `HandleLogin` que recebe a prop `**userInput**`
+### Making a Progressive Web App
 
-    *   A função `HandleLogin` chama `setUser(**userInput**)`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-    *   A função `HandleLogin` chama a prop `SetIsLoggedIn` transformando-a em true
+### Advanced Configuration
 
-    *   Na tag form deve haver um `button` ****com a prop evento `onClick` que chama a função `**HandleLogin**`, desta forma
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-            <button onClick={() => HandleLogin(userInput)}>Acessar com o nome</button>
+### Deployment
 
-        * * *
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-10.  Voltando ao App.js, agora devemos fazer uma renderização condicional onde:
+### `yarn build` fails to minify
 
-    *   Se o state `**isLoggedIn**` for true vamos renderizar o componente `WelcomePage`
-    *   Se o state `**isLoggedIn**` for false vamos renderizar o componente `GetUserComponent`
-11.  Não esqueça de passar as props para cada componente importado no App 😉
-
-## 💪Agora é com você
-
-*   Estilize sua aplicação, **seja original** 😉
-*   Consegue pensar em uma maneira de juntar a solução da atividade passada com essa?
-
-# 💡Conhecimentos aplicados:
-
-*   Fundamentos do React
-*   Passagem de valores para um componente
-*   Componentização e Reutilização
-*   Utilização dos valores vindo das props no componente
-*   Renderização condicional
-*   Eventos de formulários + state
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
