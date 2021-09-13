@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.css";
 
 const GetUserComponent = ({ setUser, setIsLoggedIn }) => {
   const [userInput, setUserInput] = useState("");
@@ -7,7 +8,8 @@ const GetUserComponent = ({ setUser, setIsLoggedIn }) => {
     setIsLoggedIn(true);
   };
   return (
-    <form>
+    <form className="user_input">
+      Insira seu nome
       <input
         type="text"
         value={userInput}
